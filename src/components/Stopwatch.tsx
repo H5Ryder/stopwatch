@@ -58,7 +58,7 @@ const Stopwatch: React.FC<StopwatchProps> = ({ lastLap = 0, addLap, resetLapData
         <p>lap</p>
       </div>
 
-      <div className="clock" onClick={clickStart}>
+      <div className="clock">
 
         {paintTicks(elapsed)}
         <div className={`start-stop ${countOn ? 'play' : 'pause'}`}>
