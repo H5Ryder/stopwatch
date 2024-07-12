@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './stopwatch.css';
 import Stopwatch from './components/Stopwatch';
 import LapDisplay from './components/LapDisplay';
