@@ -1,0 +1,170 @@
+.clock {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  border-radius: 1000px;
+  border: 2px solid var(--color-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background-color: var(--color-primary);
+}
+
+
+.time {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.current-time {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font: museomoderno-normal;
+
+}
+
+.f-seconds {
+  position: absolute;
+  top: 10%;
+  left: 102%;
+}
+
+.last-lap-time {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+}
+
+.last-lap-time:before {
+  position: absolute;
+  left: -40%;
+  top: 50%;
+  content: "lap";
+  transform: translate(0, -50%);
+}
+
+.start-stop {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 6%;
+}
+
+.start-stop>div {
+  position: absolute;
+  background-color: black;
+  width: 3px;
+  height: 20px;
+  border-radius: 3px;
+}
+
+
+.start-stop .sqr-ii {
+  right: 0%;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.start-stop .sqr-x {
+  right: 0%;
+  top: 50%;
+  height: 22.4;
+
+  transform-origin: top;
+  transform: rotate(63.4deg);
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.start-stop .sqr-xx {
+  right: 0%;
+  top: 50%;
+  height: 22.4;
+
+  transform-origin: top;
+  transform: rotate(116.4deg);
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/*** ON HOVER ***/
+.start-stop.pause .sqr-ii {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.start-stop.pause .sqr-x {
+  opacity: 0;
+  transform: rotate(63.4deg) translateY(50%);
+}
+
+.start-stop.pause .sqr-xx {
+  opacity: 0;
+  transform: rotate(116.4deg) translateY(-50%);
+}
+
+/*** BUTTONS ***/
+.btn-start {
+  position: absolute;
+  transform: translateY(-460%);
+  pointer-events: all;
+}
+
+.btn-reset {
+  position: absolute;
+  transform: rotate(45deg) translateY(-460%);
+}
+
+.btn-lap {
+  position: absolute;
+  transform: rotate(-45deg) translateY(-460%);
+}
+
+.btn {
+  width: 50px;
+  height: 30px;
+  border-radius: 10px;
+  border: 2px solid black;
+  pointer-events: auto;
+  transition: transform 0.3s ease;
+  background-color: var(--color-primary);
+}
+
+.btn-start:hover {
+  transform: translateY(-470%) scale(1.04);
+}
+
+.btn-reset:hover {
+  transform: rotate(45deg) translateY(-470%);
+}
+
+.btn-lap:hover {
+  transform: rotate(-45deg) translateY(-470%)
+}
+
+.btn>p {
+  font-size: 10px;
+  font-weight: 600;
+  padding-top: 2px;
+  text-align: center;
+}
+
+/*** MARKINGS ***/
+.mark {
+  width: 2px;
+  height: 10px;
+  border-radius: 100px;
+  background-color: var(--color-accent);
+  z-index: 100;
+  position: absolute;
+  opacity: 0.5;
+  transition: height 0.4s ease;
+}

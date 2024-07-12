@@ -1,0 +1,50 @@
+* {
+
+  margin: 0;
+  padding: 0;
+
+  --color-primary: #F4F3F7;
+  --color-accent: #260ADC;
+  --color-dark: #000000;
+  font-family: "MuseoModerno", sans-serif;
+
+}
+
+.museomoderno-normal {
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  background-color: var(--color-primary);
+
+}
+
+
+#root {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-panel {
+
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-panel {
+  width: 100%;
+  height: 100%;
+
+}
+
+
